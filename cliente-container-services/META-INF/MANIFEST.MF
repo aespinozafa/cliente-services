@@ -1,9 +1,6 @@
 Manifest-Version: 1.0
-Created-By: Maven Archiver 3.4.0
+Created-By: Maven JAR Plugin 3.3.0
 Build-Jdk-Spec: 22
-Specification-Title: cliente-container-services
-Specification-Version: 1.0
 Implementation-Title: cliente-container-services
 Implementation-Version: 1.0.0-SNAPSHOT
-Main-Class: ec.domain.container.BaseServiceApplication
 
