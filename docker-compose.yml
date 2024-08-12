@@ -1,69 +1,7 @@
 version: '3.8'
 services:
-  cliente-application-services:
-    build:
-      context: ./cliente-application-services
-      dockerfile: Dockerfile
-    ports:
-      - "8081:8080"
-    depends_on:
-      - db
 
-  cliente-commons-services:
-    build:
-      context: ./cliente-commons-services
-      dockerfile: Dockerfile
-    ports:
-      - "8082:8080"
-    depends_on:
-      - db
-
-  cliente-container-services:
-    build:
-      context: ./cliente-container-services
-      dockerfile: Dockerfile
-    ports:
-      - "8083:8080"
-    depends_on:
-      - db
-
-  cliente-dataaccess-services:
-    build:
-      context: ./cliente-dataaccess-services
-      dockerfile: Dockerfile
-    ports:
-      - "8084:8080"
-    depends_on:
-      - db
-
-  cliente-domain-services:
-    build:
-      context: ./cliente-domain-services/cliente-domain-application
-      dockerfile: Dockerfile
-    ports:
-      - "8085:8080"
-    depends_on:
-      - db
-
-  cliente-domain-core:
-    build:
-      context: ./cliente-domain-services/cliente-domain-core
-      dockerfile: Dockerfile
-    ports:
-      - "8086:8080"
-    depends_on:
-      - db
-
-  cliente-remote-services:
-    build:
-      context: ./cliente-remote-services
-      dockerfile: Dockerfile
-    ports:
-      - "8087:8080"
-    depends_on:
-      - db
-
-  db:
+  db-service:
     image: postgres:15
     environment:
       POSTGRES_DB: PRUEBA
